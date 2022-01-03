@@ -5,16 +5,13 @@ Manipuler le différentes collections de l'api java
 
 ### Prérequis
 - Cloner le projet sur votre poste dans le repertoire de votre choix
-- Ouvrir le projet USSI2A-TP7
-    - File > New > Project from Exiting Sources (ou *Import Project* si vous êtes sur l'écran d'accueil)
-    - Selectionner le dossier du projet
-    - Selectionner **Create project from existing sources**
-    - Conserver les informations (*Nom, Location, Format*)
-    - IntelliJ détecte que c'est un projet Java
-    - Aucune bibliothèque n'est integtée au projet
-    - Choisir JDK14, s'il n'est pas dans la liste, cliquer sur le <span style="color:green">**+**</span> et selectionner le dossier du JDK 14
-    - Aucun Framework n'est detecté
-    - Aller dans File > Project Structure et Choisir 14 dans **Project language level**
+- Ouvrir le projet TP7 :
+  - Sur l'écran d'accueil d'IntelliJ, cliquer sur **New Project**
+  - Selectionner **Java** dans la liste de gauche et **17** dans **Project SDK** puis Next
+  - Ne rien cocher puis **Next**
+  - Cliquer sur les **...** de **Project location** puis selectionner le dossier du projet tp7-xxxxx et cliquer sur **OK**
+  - Cliquer sur **Finish**
+  - Le projet s'ouvre
 
 ### Utilisation de GIT
 
@@ -38,8 +35,8 @@ Manipuler le différentes collections de l'api java
 
 - Dans un constructeur sans paramètre
 
-  - Initialisez cette Liste avec une *ArrayList*
-  - Ajouter les couleurs **noir**, **rouge**, **vert**, **marron**, **blanc**
+  - Initialisez cette Liste en lui affectant un objet *ArrayList*
+  - Ajouter des chaines à la liste qui correspondent aux couleurs :  **noir**, **rouge**, **vert**, **marron**, **blanc**
   - Si possible, ajouter une 2ème fois le **rouge**
   - Ajouter la couleur **cyan** à la première position sans retoucher au début de votre code.
   
@@ -75,9 +72,11 @@ Manipuler le différentes collections de l'api java
 ### Exercice 3
 
 - Dans **Nuancier**, 
-  - créer un attribut ```Map<Character, String> couleursMap```
-  - Créer une méthode privée ```private void initializeMap()``` qui va initiliser l'attribut couleursMap avec une HashMap dont la valeur est la couleur et la clé est la 1ère lettre de la couleur. Pour cela, parcourrez la liste ou le treeSet.
-  - Appeler cette méthode a la fin de votre constructeur
+  - créer un attribut **couleursMap** : ```Map<Character, String> couleursMap```
+  - Créer une méthode privée ```private void initializeMap()``` qui va initialiser l'attribut couleursMap avec une HashMap dont la valeur est la couleur et la clé est la 1ère lettre de la couleur. Pour celà
+    - Commencer par initialiser l'attribut avec un objet Hashmap. 
+    - Ensuite, parcourrez le treeSet et à chaque itération, ajouter une couleur avec comme clé la 1ère lettre de la couleur.
+  - Appeler cette méthode a la fin de votre constructeur afin que la hashmap soit crée immédiatement après l'affectation des couleurs dans la liste.
   - créer une méthode ``public String getCouleurFromCode(char initiale)`` qui doit renvoyer la bonne couleur selon la lettre demandée
 - Dans **Execute**, compléter la méthode **exercice3()** pour : 
   - Appeler **getCouleurFromCode ** et afficher la couleur qui correspond à r
